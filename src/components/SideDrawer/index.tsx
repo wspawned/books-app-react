@@ -5,19 +5,19 @@ import { SIDEBAR_ITEMS } from '../../constants';
 
 function SideDrawer() {
 
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div className="side-drawer">
 
       <h2>Categories</h2>
-      {SIDEBAR_ITEMS.map((item) => {
+      {SIDEBAR_ITEMS.map((item, index) => {
         return (
           <div className='side-drawer-item'
-            // onClick={() => {
-            //   navigate(`/?category=${genre.name}&id=${genre.id}&page=1`);
-            // }}
-            // key={genre.id}
+            onClick={() => {
+              navigate(`/?category=${item.path}&page=1`);
+            }}
+            key={index}
           >
             {item.name}
           </div>

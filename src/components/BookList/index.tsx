@@ -1,18 +1,12 @@
+
 import { useEffect } from 'react';
 import { getCategoryBooks } from '../../redux/actions/getCategoryBooks';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import BookListItem from './BookListItem';
 import './style.css';
 
-const BookList = ( ) => {
+const BookList = ({books}) => {
 
-  const dispatch = useAppDispatch();
-
-  useEffect(()=> {
-    dispatch(getCategoryBooks())
-  },[])
-
-  const books = useAppSelector(state=> state.general.bookList.items)
 
   return (
     <div className="book-list">

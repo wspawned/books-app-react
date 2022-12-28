@@ -1,6 +1,5 @@
 .list-item {
   flex-direction: column;
-  display: grid;
   margin: 15px;
   width: 20%;
 
