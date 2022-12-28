@@ -1,0 +1,31 @@
+.side-drawer {
+  position: sticky;
+  min-width: 250px;
+  left: 0;
+  top: 0;
+  padding: 0px 10px;
+  overflow-y: auto;
+  box-shadow: 0px 8px 10px -5px rgb(0 0 0 / 20%), 0px 16px 24px 2px rgb(0 0 0 / 14%), 0px 6px 30px 5px rgb(0 0 0 / 12%);
+
+  background-color: #004D8C;
+}
+
+/* #474140 */
+
+.side-drawer > h2 {
+  text-shadow: 0 0 3px black;
+  color: #CC8F8F;
+}
+
+.side-drawer-item {
+  display: block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.side-drawer-item:hover {
+  background-color: #8C8C8C;
+  font-size: 1.2em;
+  color: #CC8F8F;
+}

@@ -1,4 +1,7 @@
-.App {
-  text-align: center;
-  
+.app {
+  background-color: #002340;
+  color: antiquewhite;
+  min-height: 100vh;
+  display: flex;
+
 }
