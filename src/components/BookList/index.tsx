@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { getBestSellers } from '../../redux/actions/getBestSellers';
+import { getCategoryBooks } from '../../redux/actions/getCategoryBooks';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import BookListItem from './BookListItem';
 import './style.css';
@@ -9,15 +9,15 @@ const BookList = ( ) => {
   const dispatch = useAppDispatch();
 
   useEffect(()=> {
-    dispatch(getBestSellers())
+    dispatch(getCategoryBooks())
   },[])
 
-  const books = useAppSelector(state=> state.general.bestSellerBooks.results)
+  const books = useAppSelector(state=> state.general.bookList.items)
 
   return (
     <div className="book-list">
     
-    {books.map((book, index) => {
+    { books.length>0 && books.map((book, index) => {
       return (
           
           <BookListItem
