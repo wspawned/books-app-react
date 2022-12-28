@@ -1,10 +1,14 @@
-import {Box} from '@mui/material';
+import { useAppSelector } from "../../redux/hooks/hooks";
+
 
 const Contact = () => {
+
+  const test = useAppSelector(state => state.general.test)
+
   return(
-    <Box>
-      Contact
-    </Box>
+    <div>
+      Contact {test}
+    </div>
   )
 };
 
