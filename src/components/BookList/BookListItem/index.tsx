@@ -1,9 +1,11 @@
 import './style.css';
 
-const BookListItem:React.FC<{book:string, key:number}> = ({book}) => {
+const BookListItem:React.FC<{book:any, key:number}> = ({book}) => {
+  
+
   return (
     <div className='list-item'>
-      {book}
+      {book.isbns[0].isbn10}
     </div>
   )
 };

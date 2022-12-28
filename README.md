@@ -21,3 +21,6 @@ https://www.googleapis.com/books/v1/volumes?q=subject:fiction&key=APIKEY
 - Web sitede aşağı inildiğinde ekranın sağ ya da sol tarafında açılabilir menü olmalı
 - Kullanıcı kayıt ve giriş ekran tasarımı olmalı
 - Basit bir yönetim paneli olabilir. (Opional)
+
+
+https://developer.nytimes.com/docs/books-product/1/routes/lists.json/get
