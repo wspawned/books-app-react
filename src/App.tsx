@@ -6,6 +6,7 @@ import About from './components/About/About';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact/Contact';
 import SideDrawer from './components/SideDrawer';
+import LogInPage from './components/LogInPage';
 
 const App:React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App:React.FC = () => {
               <Route path='/about' element={<About/>}/>
               <Route path='/portfolio' element={<Portfolio/>}/>
               <Route path='/contact' element={<Contact/>}/>
+              <Route path='/login' element= {<LogInPage/>}/>
             </Routes>
           </div>    
         </BrowserRouter>

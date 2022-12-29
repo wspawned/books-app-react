@@ -26,7 +26,7 @@ const BookList:React.FC<{books:ListBookType[]}> = ({books}) => {
       {showModal ? (
         <Modal>
           <div>
-            <h1>Would you like to see book on Google Books?</h1>
+            <h1>Would you like to see the book on Google Books?</h1>
             <div className="buttons">
               <button onClick={() => {
                 window.open(previewLink, '_blank');

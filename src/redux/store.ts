@@ -1,9 +1,11 @@
 import  thunkMiddleWare  from 'redux-thunk';
 import {  combineReducers, configureStore } from '@reduxjs/toolkit';
 import { generalSlice } from './slices/generalSlice';
+import { usersSlice } from './slices/usersSlice';
 
 const rootReducer = combineReducers({
   general: generalSlice.reducer,
+  users: usersSlice.reducer,
 })
 
 const store = configureStore({
