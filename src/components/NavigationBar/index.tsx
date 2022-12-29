@@ -1,10 +1,11 @@
 import {AppBar, Box, Toolbar, Typography, Button, IconButton, Link} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NAVBAR_ITEMS } from '../../constants';
+import { useNavigate } from 'react-router-dom';
 
 const NavigationBar = () => {
 
-
+  const navigate = useNavigate();
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -31,7 +32,7 @@ const NavigationBar = () => {
             })
           }
           
-          <Button color="inherit">Login / Sign Up</Button>
+          <Button onClick={()=>navigate("/login")} color="inherit">Login / Sign Up</Button>
         </Toolbar>
       </AppBar>
     </Box>

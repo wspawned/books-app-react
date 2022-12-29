@@ -16,13 +16,11 @@ const LogInPage = () => {
     const userData = userDatabase.find((user) => user.username === uname);
     if (userData) {
       if (userData.password !== pass) {
-        // Invalid password
         setErrorMessages("Invalid password");
       } else {
         setIsSubmitted(true);
       }
     } else {
-      // Username not found
       setErrorMessages("Username not found");
     }
   }

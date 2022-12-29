@@ -17,8 +17,11 @@ const BookListItem:React.FC<{
     <div className='list-item'
     onClick={
       ()=> {
-        openModal();
-        getUrl(previewLink);
+        if(!showModal) {
+          openModal();
+          getUrl(previewLink);
+        }
+        
       }
     }
     >
