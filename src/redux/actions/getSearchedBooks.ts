@@ -3,16 +3,19 @@ import { googleAPI } from "../../api/googleAPI";
 
 export const getSearchedBooks = createAsyncThunk(
   "searched-books/get",
-  async ({paramsCategory, paramsPage}:{paramsCategory:string, paramsPage:number}) => {
+  async ({paramsCategory, paramsPage, maxResults}:{paramsCategory:string, paramsPage:number, maxResults:number}) => {
     const res = await googleAPI.get(``, {
       params: {
         q : `intitle:${paramsCategory}`,
-        startIndex : (paramsPage-1)*15,
+        startIndex : (paramsPage-1)*maxResults,
+        maxResults: maxResults,
       },
     });
     return res.data;
   }
 );
+
+
 
 
 export interface CategoryBooksType {

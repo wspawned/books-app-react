@@ -8,15 +8,15 @@ import BookList from "../BookList";
 import SearchBox from "../SearchBox";
 import './style.css';
 
-import Modal from "../Modal";
-
 
 const Home:React.FC = () => {
 
   const bookList = useAppSelector(state => state.general.bookList.items );
   const totalItems = useAppSelector(state => state.general.bookList.totalItems);
-  const totalPages = Math.ceil(totalItems/15);
+  
   const Search = useAppSelector(state=> state.general.searchedWords);
+  const maxResults = useAppSelector(state=> state.general.pageSize);
+  const totalPages = Math.ceil(totalItems/maxResults);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   
@@ -26,8 +26,8 @@ const Home:React.FC = () => {
   
   useEffect( () => {
     (Search) ?
-    dispatch(getSearchedBooks( {paramsCategory, paramsPage} )) :
-    dispatch(getCategoryBooks( {paramsCategory, paramsPage} ));
+    dispatch(getSearchedBooks( {paramsCategory, paramsPage, maxResults} )) :
+    dispatch(getCategoryBooks( {paramsCategory, paramsPage, maxResults} ));
   }, [searchParams, dispatch ] )
 
 

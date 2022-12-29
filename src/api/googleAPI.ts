@@ -10,7 +10,7 @@ export const googleAPI = axios.create({
   params: { 
     key: GOOGLE_API_KEY,
     
-    maxResults : 15,
+    
     
   }
 });
