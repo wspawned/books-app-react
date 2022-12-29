@@ -8,7 +8,7 @@ const BookListItem:React.FC<{
 }> = ({book, showModal, openModal, getUrl}) => {
   
   const {id} = book;
-  const { title, subtitle, authors, previewLink } = book.volumeInfo;
+  const { title, subtitle, authors, previewLink, description } = book.volumeInfo;
   const thumbnail = book?.volumeInfo?.imageLinks?.smallThumbnail;
 
 
@@ -25,16 +25,27 @@ const BookListItem:React.FC<{
       }
     }
     >
-
-      <span className='list-book-title' >
-        {title}
-      </span>
-
-      <img
-      className='list-book-cover'
-      src={thumbnail}
-      alt={`${title} Cover`}
+      <div className='list-book-cover'>
+        <img
+        
+        src={thumbnail}
+        alt={`${title} Cover`}
       />
+      </div>
+      
+
+      <div className='list-book-info' >
+        <h3 className='list-book-title' >
+        {`${title} (${authors})`}
+        </h3>
+
+        <div className='description' >
+          <p  >
+          {`${description}`}
+          </p>
+        </div>
+      </div>
+      
 
 
     </div>

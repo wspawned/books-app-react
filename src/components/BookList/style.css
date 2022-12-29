@@ -4,11 +4,12 @@
   text-align: center;
 } */
 
-.movie-list {
+.book-list {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  text-align: center;
+  padding:20px;
 }
 /* 
 
