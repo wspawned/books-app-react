@@ -11,7 +11,7 @@ import LogInPage from './components/LogInPage';
 const App:React.FC = () => {
   return (
         <>
-        <BrowserRouter>
+        
           <NavigationBar/>
           <div className='app' >
             <SideDrawer/>
@@ -23,7 +23,7 @@ const App:React.FC = () => {
               <Route path='/login' element= {<LogInPage/>}/>
             </Routes>
           </div>    
-        </BrowserRouter>
+        
         </>
   );
 }
