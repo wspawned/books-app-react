@@ -7,6 +7,7 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact/Contact';
 import SideDrawer from './components/SideDrawer';
 import LogInPage from './components/LogInPage';
+import AdminPanel from './components/AdminPanel';
 
 const App:React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const App:React.FC = () => {
               <Route path='/portfolio' element={<Portfolio/>}/>
               <Route path='/contact' element={<Contact/>}/>
               <Route path='/login' element= {<LogInPage/>}/>
+              <Route path='/admin' element= {<AdminPanel/>}/>
             </Routes>
           </div>    
         

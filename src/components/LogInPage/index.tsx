@@ -1,15 +1,15 @@
 import './style.css';
 import { useState } from "react";
-import { useAppSelector } from '../../redux/hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
+import { setActiveUser } from '../../redux/slices/usersSlice';
 
 const LogInPage = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessages, setErrorMessages] = useState("");
   const [uname, setUname] = useState("");
   const [pass, setPass] = useState("");
 
-
-  
+  const dispatch = useAppDispatch();
+  const activeUser = useAppSelector(state=> state.users.activeUser.username);
   const userDatabase = useAppSelector(state=>state.users.userDatabase)
   
   const handleSubmit = () => {
@@ -18,18 +18,12 @@ const LogInPage = () => {
       if (userData.password !== pass) {
         setErrorMessages("Invalid password");
       } else {
-        setIsSubmitted(true);
+        dispatch(setActiveUser(userData));
       }
     } else {
       setErrorMessages("Username not found");
     }
   }
-  
-  
-  
-
-
-  
 
   const renderForm = (
       <div className="form">
@@ -66,7 +60,7 @@ const LogInPage = () => {
       <div className="login-signup">
         <div className="login-form">
           <div className="title">Sign In </div>
-          {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+          {activeUser ? <div>User is successfully logged in</div> : renderForm}
         </div>
       </div>
   )
