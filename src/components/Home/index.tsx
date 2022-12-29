@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { SIDEBAR_ITEMS } from "../../constants";
-import { getCategoryBooks } from "../../redux/actions/getCategoryBooks";
+import { getCategoryBooks, ListBookType } from "../../redux/actions/getCategoryBooks";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
 import BookList from "../BookList";
 import './style.css';
 
-const Home = () => {
+
+const Home:React.FC = () => {
 
   const bookList = useAppSelector(state => state.general.bookList.items );
   const totalItems = useAppSelector(state => state.general.bookList.totalItems);

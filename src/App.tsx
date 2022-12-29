@@ -7,7 +7,7 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact/Contact';
 import SideDrawer from './components/SideDrawer';
 
-function App() {
+const App:React.FC = () => {
   return (
         <>
         <BrowserRouter>

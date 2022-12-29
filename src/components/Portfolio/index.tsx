@@ -1,10 +1,10 @@
-import {Box} from '@mui/material';
 
-const Portfolio = () => {
+
+const Portfolio:React.FC = () => {
   return(
-    <Box>
+    <div>
       Portfolio
-    </Box>
+    </div>
   )
 };
 

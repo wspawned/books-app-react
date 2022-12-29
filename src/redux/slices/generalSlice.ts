@@ -1,9 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { getCategoryBooks } from "../actions/getCategoryBooks";
+import type {  ListBookType } from "../actions/getCategoryBooks";
 
-const INITIAL_STATE = {
+interface GeneralState {
+  bookList: BookListType,
+}
+
+export interface BookListType {
+  totalItems: number,
+  items: ListBookType[] | [] ,
+}
+
+const INITIAL_STATE:GeneralState = {
   bookList: { totalItems:0, items: []},
-  test: "can U see ME"
 };
 
 export const generalSlice = createSlice({

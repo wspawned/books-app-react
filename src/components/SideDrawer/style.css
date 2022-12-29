@@ -1,6 +1,7 @@
 .side-drawer {
   position: sticky;
-  min-width: 250px;
+  max-height: 100vh;
+  min-width:200px;
   left: 0;
   top: 0;
   padding: 0px 10px;
@@ -14,7 +15,7 @@
 
 .side-drawer > h2 {
   text-shadow: 0 0 3px black;
-  color: #CC8F8F;
+  color: aliceblue;
 }
 
 .side-drawer-item {
@@ -25,7 +26,6 @@
 }
 
 .side-drawer-item:hover {
-  background-color: #8C8C8C;
+  background-color: #002340;
   font-size: 1.2em;
-  color: #CC8F8F;
 }

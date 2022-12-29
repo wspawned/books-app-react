@@ -1,11 +1,11 @@
 
 import { useEffect } from 'react';
-import { getCategoryBooks } from '../../redux/actions/getCategoryBooks';
+import { getCategoryBooks, ListBookType } from '../../redux/actions/getCategoryBooks';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import BookListItem from './BookListItem';
 import './style.css';
 
-const BookList = ({books}) => {
+const BookList:React.FC<{books:ListBookType[]}> = ({books}) => {
 
 
   return (

@@ -1,15 +1,12 @@
-import {Box, Paper, Typography} from '@mui/material';
+import {Typography} from '@mui/material';
 
-const About = () => {
+const About:React.FC = () => {
   return(
-    <Box  >
-      <Paper >
+    <div  >
         <Typography>
           {ABOUT_INFO}
         </Typography>
-      
-      </Paper>
-    </Box>
+    </div>
   )
 };
 
