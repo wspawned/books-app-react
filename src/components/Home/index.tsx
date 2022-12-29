@@ -8,6 +8,8 @@ import BookList from "../BookList";
 import SearchBox from "../SearchBox";
 import './style.css';
 
+import Modal from "../Modal";
+
 
 const Home:React.FC = () => {
 
@@ -28,12 +30,18 @@ const Home:React.FC = () => {
     dispatch(getCategoryBooks( {paramsCategory, paramsPage} ));
   }, [searchParams, dispatch ] )
 
+
+
   return(
     <>
       <SearchBox/>
       <BookList
       books={bookList}
       />
+
+
+
+
 
         <div className='page-buttons'>
           {paramsPage>1 && (<button
