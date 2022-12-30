@@ -33,7 +33,7 @@ const Home:React.FC = () => {
 
 
   return(
-    <>
+    <div className="home" >
       <SearchBox/>
       <BookList
       books={bookList}
@@ -59,7 +59,8 @@ const Home:React.FC = () => {
           >{`${paramsPage} => ${paramsPage +1}`}</button>)}  
         </div>
 
-    </>
+    </div>
+    
   )
 };
 
