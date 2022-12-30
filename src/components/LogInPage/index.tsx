@@ -4,7 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../redux/hooks/hooks';
 import { setActiveUser } from '../../redux/slices/usersSlice';
 
 const LogInPage = () => {
-  const [errorMessages, setErrorMessages] = useState("");
+  const [errorMessages, setErrorMessages] = useState("Username: admin, Password: admin");
   const [uname, setUname] = useState("");
   const [pass, setPass] = useState("");
 

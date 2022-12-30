@@ -1,11 +1,17 @@
-import {Typography} from '@mui/material';
+
+import './style.css';
+
 
 const About:React.FC = () => {
   return(
-    <div  >
-        <Typography>
+    <div className='about' >
+      <div className='about-text' >
+        <h2>ABOUT US</h2>
+        <p>
           {ABOUT_INFO}
-        </Typography>
+        </p>
+      </div>
+
     </div>
   )
 };
