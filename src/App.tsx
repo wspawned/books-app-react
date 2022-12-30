@@ -1,5 +1,5 @@
 import NavigationBar from './components/NavigationBar';
-import {BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import Home from './components/Home';
 import About from './components/About/About';
@@ -9,25 +9,23 @@ import SideDrawer from './components/SideDrawer';
 import LogInPage from './components/LogInPage';
 import AdminPanel from './components/AdminPanel';
 
-const App:React.FC = () => {
+const App: React.FC = () => {
   return (
-        <>
-        
-          <NavigationBar/>
-          <div className='app' >
-            <SideDrawer/>
-            <Routes>
-              <Route path='/' element={<Home/>}/>
-              <Route path='/about' element={<About/>}/>
-              <Route path='/portfolio' element={<Portfolio/>}/>
-              <Route path='/contact' element={<Contact/>}/>
-              <Route path='/login' element= {<LogInPage/>}/>
-              <Route path='/admin' element= {<AdminPanel/>}/>
-            </Routes>
-          </div>    
-        
-        </>
+    <>
+      <NavigationBar />
+      <div className="app">
+        <SideDrawer />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<LogInPage />} />
+          <Route path="/admin" element={<AdminPanel />} />
+        </Routes>
+      </div>
+    </>
   );
-}
+};
 
 export default App;

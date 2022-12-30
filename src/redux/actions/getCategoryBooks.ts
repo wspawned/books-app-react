@@ -1,8 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { googleAPI } from "../../api/googleAPI";
 
-
-
 export const getCategoryBooks = createAsyncThunk(
   "category-books/get",
   async ({paramsCategory, paramsPage, maxResults }:{paramsCategory:string, paramsPage:number, maxResults : number}) => {
@@ -16,7 +14,6 @@ export const getCategoryBooks = createAsyncThunk(
     return res.data;
   }
 );
-
 
 export interface CategoryBooksType {
   kind: string;

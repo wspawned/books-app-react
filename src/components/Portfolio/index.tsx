@@ -1,19 +1,18 @@
 import './style.css';
 
 const Portfolio:React.FC = () => {
-  return(
-    <div className='about' >
-    <div className='about-text' >
-      <h2>OUR WORKS</h2>
-      <ul>
-        {PORTFOLIO_CONTENTS.map((content)=>{
-          return(<li>{content}</li>)
-        })}
-      </ul>
+  return (
+    <div className="about">
+      <div className="about-text">
+        <h2>OUR WORKS</h2>
+        <ul>
+          {PORTFOLIO_CONTENTS.map((content) => {
+            return <li>{content}</li>;
+          })}
+        </ul>
+      </div>
     </div>
-
-  </div>
-  )
+  );
 };
 
 const PORTFOLIO_CONTENTS = [

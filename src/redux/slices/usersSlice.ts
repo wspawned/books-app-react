@@ -51,4 +51,3 @@ interface User {
   password: string,
   isAdmin: boolean,
 }
-

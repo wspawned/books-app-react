@@ -8,6 +8,7 @@ const INITIAL_STATE:GeneralState = {
   bookList: { totalItems:0, items: []},
   searchedWords: "",
   pageSize: 15,
+  isSideMenuOpen: true,
 };
 
 export const generalSlice = createSlice({
@@ -22,6 +23,9 @@ export const generalSlice = createSlice({
     },
     setPageSize: (state, action: PayloadAction<number>) => {
       state.pageSize = action.payload;
+    },
+    toogleSideMenu: (state) => {
+      state.isSideMenuOpen = !state.isSideMenuOpen;
     },
   },
   extraReducers: (builder) => {
@@ -38,12 +42,13 @@ export const generalSlice = createSlice({
   },
 })
 
-export const { setSearchedWords, resetSearchedWords, setPageSize } = generalSlice.actions;
+export const { setSearchedWords, resetSearchedWords, setPageSize, toogleSideMenu } = generalSlice.actions;
 
 interface GeneralState {
   bookList: BookListType,
   searchedWords: string,
   pageSize: number,
+  isSideMenuOpen: boolean,
 }
 
 export interface BookListType {

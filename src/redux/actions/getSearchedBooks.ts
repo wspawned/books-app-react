@@ -15,9 +15,6 @@ export const getSearchedBooks = createAsyncThunk(
   }
 );
 
-
-
-
 export interface CategoryBooksType {
   kind: string;
   totalItems: number;

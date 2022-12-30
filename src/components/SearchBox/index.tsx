@@ -5,11 +5,9 @@ import { setSearchedWords } from "../../redux/slices/generalSlice";
 import './style.css';
 
 const SearchBox = () => {
-
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-
 
   return (
     <div className="search-box" >

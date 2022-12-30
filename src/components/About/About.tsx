@@ -1,6 +1,4 @@
-
 import './style.css';
-
 
 const About:React.FC = () => {
   return(
@@ -11,7 +9,6 @@ const About:React.FC = () => {
           {ABOUT_INFO}
         </p>
       </div>
-
     </div>
   )
 };

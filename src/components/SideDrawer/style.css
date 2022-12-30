@@ -11,6 +11,10 @@
   background-color: #004D8C;
 }
 
+.non-display {
+  display: none;
+}
+
 /* #474140 */
 
 .side-drawer > h2 {

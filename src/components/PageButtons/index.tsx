@@ -44,8 +44,7 @@ const PageButtons:React.FC<{paramsPage:number, totalPages:number, paramsCategory
   })
 
   return (
-    <div 
-    // className='page-buttons'
+    <div
     className={activePageButtonsClass}
     id='page-buttons'
     >
