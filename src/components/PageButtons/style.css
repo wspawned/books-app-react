@@ -3,11 +3,23 @@
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
-  justify-content: space-around;
   /* use justify content with transition */
 }
 
+.page-buttons-distributed {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
 .page-buttons > button {
-  height: 30px;
+  height: 40px;
+  width: 80px;
+}
+
+.page-buttons-distributed > button {
+  height: 40px;
   width: 80px;
 }
