@@ -5,6 +5,7 @@ import { getCategoryBooks, ListBookType } from "../../redux/actions/getCategoryB
 import { getSearchedBooks } from "../../redux/actions/getSearchedBooks";
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
 import BookList from "../BookList";
+import PageButtons from "../PageButtons";
 import SearchBox from "../SearchBox";
 import './style.css';
 
@@ -39,25 +40,11 @@ const Home:React.FC = () => {
       books={bookList}
       />
 
-
-
-
-
-        <div className='page-buttons'>
-          {paramsPage>1 && (<button
-          onClick={()=> {
-            const newPageNumber =  Number(paramsPage) -1 ;
-            navigate(`/?category=${paramsCategory}&page=${newPageNumber}`);
-          } }
-          >{`${paramsPage -1} <= ${paramsPage}`}</button>)}
-
-          {paramsPage<totalPages && (<button
-          onClick={()=> {
-            const newPageNumber =  Number(paramsPage) +1 ;
-            navigate(`/?category=${paramsCategory}&page=${newPageNumber}`);
-          } }
-          >{`${paramsPage} => ${paramsPage +1}`}</button>)}  
-        </div>
+      <PageButtons
+      paramsPage={paramsPage}
+      totalPages={totalPages}
+      paramsCategory={paramsCategory}
+      />
 
     </div>
     
