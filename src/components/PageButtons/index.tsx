@@ -54,14 +54,18 @@ const PageButtons:React.FC<{paramsPage:number, totalPages:number, paramsCategory
       const newPageNumber =  Number(paramsPage) -1 ;
       navigate(`/?category=${paramsCategory}&page=${newPageNumber}`);
     } }
-    >{`Prev Page ${paramsPage -1} <= ${paramsPage}`}</button>)}
+    >Prev Page
+    <span style={{display: "block"}} >{` ${paramsPage -1} <= ${paramsPage}`}</span>
+    </button>)}
 
     {paramsPage<totalPages && (<button
     onClick={()=> {
       const newPageNumber =  Number(paramsPage) +1 ;
       navigate(`/?category=${paramsCategory}&page=${newPageNumber}`);
     } }
-    >{`Next Page ${paramsPage} => ${paramsPage +1}`}</button>)}  
+    >Next Page
+    <span style={{display: "block"}} >{` ${paramsPage} => ${paramsPage +1}`}</span>
+    </button>)}  
   </div>
   )
 };

@@ -52,7 +52,7 @@ const LogInPage = () => {
          <button type="submit">Submit</button>
        </div>
      </form>
-     {errorMessages}
+     <span className='error' >{errorMessages}</span>
    </div>
     )
 
