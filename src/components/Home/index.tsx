@@ -1,3 +1,4 @@
+import { CircularProgress, Typography } from "@mui/material";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { SIDEBAR_ITEMS } from "../../constants";
@@ -28,6 +29,7 @@ const Home:React.FC = () => {
   }, [searchParams, dispatch ] )
 
   return(
+    bookList[0]?.volumeInfo?.imageLinks?.smallThumbnail?
     <div className="home" >
       <SearchBox/>
       <BookList
@@ -38,6 +40,10 @@ const Home:React.FC = () => {
       totalPages={totalPages}
       paramsCategory={paramsCategory}
       />
+    </div> :
+    <div className="loader">
+      <CircularProgress color="secondary" />
+      <Typography variant="h6" color="primary">Loading ...</Typography>
     </div>
   )
 };

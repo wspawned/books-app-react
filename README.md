@@ -1,3 +1,7 @@
+# Books App
+
+
+
 ## Google Books API
 
 https://developers.google.com/books/docs/v1/using#PerformingSearch
@@ -18,9 +22,7 @@ https://www.googleapis.com/books/v1/volumes?q=subject:fiction&key=APIKEY
 - ~~Arama kutusu, listeleme, filtreleme özelliği ve bu arama sonucunda veriler listelenmeli~~
 - ~~Listelenen arama sonuçları sayfalandırma yapısı olarak gösterilmeli ve veriler arası hareket edilmeli.(Örn: 15 sonuç gelmesi ve 5'li gruplar halinde gösterilmesi ile sayfalara geçiş yapılabilmesi)~~
 - ~~Herhangi bir yerden (arama sonucunda çıkan text metninden bir cümle ile açılabilir) örnek mesaj kutusu gösterimi ve mesaj kutusu içerisinden bir kelimeye tıklanması ile link yönlendirmesi olmalı~~
-- Web sitede aşağı inildiğinde ekranın sağ ya da sol tarafında açılabilir menü olmalı
+- ~~Web sitede aşağı inildiğinde ekranın sağ ya da sol tarafında açılabilir menü olmalı~~
 - ~~Kullanıcı kayıt ve giriş ekran tasarımı olmalı~~
-- Basit bir yönetim paneli olabilir. (Optional)
+- ~~Basit bir yönetim paneli olabilir. (Optional)~~
 
-
-https://developer.nytimes.com/docs/books-product/1/routes/lists.json/get

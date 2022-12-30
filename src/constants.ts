@@ -21,5 +21,3 @@ export const SIDEBAR_ITEMS = [
 ]
 
 export const GOOGLE_BOOKS_API_KEY = "AIzaSyBDY0oG5HPL6BQ5YdyWXy-MI6UdTV4LSr8";
-
-export const NYT_BOOKS_API_KEY = "gDIHYGDXjtgkNpu5EkcnAvvnboGHDkcK";
