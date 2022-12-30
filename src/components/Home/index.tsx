@@ -32,6 +32,7 @@ const Home:React.FC = () => {
     bookList[0]?.volumeInfo?.imageLinks?.smallThumbnail?
     <div className="home" >
       <SearchBox/>
+      {Search ? <h2>Search Results</h2> : <h2>{paramsCategory.toUpperCase()} BOOKS</h2> }
       <BookList
       books={bookList}
       />

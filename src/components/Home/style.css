@@ -13,16 +13,10 @@
   margin: auto;
 }
 
-/* .movie-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.home > h2 {
+  margin-bottom: 0;
+  margin-top: 80px;
 }
-
-.category-header {
-  margin-top: 40px;
-  margin-bottom: 40px;
-} */
 
 
 
