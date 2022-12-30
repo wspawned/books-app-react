@@ -6,6 +6,7 @@ import BookListItem from './BookListItem';
 import './style.css';
 import { useState } from "react";
 import Modal from '../Modal';
+import MessageModal from './MessageModal';
 
 const BookList:React.FC<{books:ListBookType[]}> = ({books}) => {
 
@@ -25,7 +26,11 @@ const BookList:React.FC<{books:ListBookType[]}> = ({books}) => {
 
       {showModal ? (
         <Modal>
-          <div>
+          <MessageModal
+          previewLink = {previewLink}
+          closeModal = {closeModal}
+          />
+          {/* <div>
             <h1>Would you like to see the book on Google Books?</h1>
             <div className="buttons">
               <button onClick={() => {
@@ -34,7 +39,7 @@ const BookList:React.FC<{books:ListBookType[]}> = ({books}) => {
               }}>Yes</button>
               <button onClick={() => closeModal()}>No</button>
             </div>
-          </div>
+          </div> */}
         </Modal>
       ) : null}
 

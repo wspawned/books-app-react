@@ -17,9 +17,11 @@
   transform: scale(1.1); */
   /* background-color: #508587; */
   background-color: #306D9F;
+  
 }
 
 .list-book-cover{
+  display:flex;
   width: 130px;
   height: 200px;
 }
