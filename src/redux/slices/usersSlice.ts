@@ -33,10 +33,13 @@ export const usersSlice = createSlice({
     resetActiveUser: (state) => {
       state.activeUser = INITIAL_STATE.activeUser;
     },
+    addUser: (state, action: PayloadAction<User>) => {
+      state.userDatabase = [...state.userDatabase, action.payload];
+    },
   },
 })
 
-export const { setActiveUser, resetActiveUser } = usersSlice.actions;
+export const { setActiveUser, resetActiveUser, addUser } = usersSlice.actions;
 
 interface UserState {
   userDatabase: User[],

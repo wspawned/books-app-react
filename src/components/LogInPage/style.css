@@ -73,3 +73,8 @@ input[type="submit"]:hover {
   gap: 8px;
   margin: 10px;
 }
+
+.login-signup-toogle:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
