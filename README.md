@@ -1,6 +1,8 @@
 # Books App React
 
-Sinerji Hukuk Yazılımları A.Ş. için hazırlanmış case çalışmasıdır. Projede Google Books Rest API, Axios, Redux, Redux Thunk kullanılmıştır ve kodlar TypeScript ile yazılmıştır. Projenin AWS Amplify ile deploy edilmiş hali linktedir.
+Proje Google Books Rest API kullanılarak TypeScript ile yazılmıştır. Axios ile request call işlemleri ve Redux, Redux Thunk ile state management sağlanmıştır. Arayüz için Material UI kullanılmıştır.  
+
+Projenin AWS Amplify ile deploy edilmiş hali linktedir.
 
 [Deployed project link](https://main.d3ik3xbhd74gkm.amplifyapp.com/)
 
